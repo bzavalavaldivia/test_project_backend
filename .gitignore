@@ -1,0 +1,3 @@
+test_project/*.sqlite3
+test_project/*.sqlite2
+test_project/*.sqlite
