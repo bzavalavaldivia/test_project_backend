@@ -15,7 +15,12 @@ $ git clone https://github.com/bzavalavaldivia/test_project.git
 $ cd test_project
 $ pip install -r requirements.txt
 
-Configura el archivo test_project/settings/local.py con la información de tu base de datos.
+Crea una copia de los siguientes archivos:
+
+test_project/settings/local.py.example a test_project/settings/local.py
+test_project/settings/production.py.example a test_project/settings/production.py
+
+Configura el archivo test_project/settings/local.py o production.py con la información de tu base de datos.
 
 $ python manage.py makemigrations
 $ python manage.py migrate

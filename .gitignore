@@ -1,3 +1,5 @@
 test_project/*.sqlite3
 test_project/*.sqlite2
 test_project/*.sqlite
+test_project/settings/local.py
+test_project/settings/production.py
