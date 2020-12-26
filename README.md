@@ -1,37 +1,38 @@
-# Transactions ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+# Test Project ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
-Prueba de sistema CRUD.
+Prueba de sistema de encuestas.
 
 ## Installation
 
 ### Requirements
 * Git
-* PHP >= 7.1.3
+* Python >= 3.9.1
 * MySQL o MariaDB
-* Composer
 
 ## Pasos
 ```
-$ git clone https://github.com/bryanzavala/test.git
-$ cd test
-$ composer install
-$ cp .env.example .env
-$ php artisan key:generate
+$ git clone https://github.com/bzavalavaldivia/test_project.git
+$ cd test_project
+$ pip install -r requirements.txt
 
-Configura el archivo .env con la información de tu base de datos.
+Configura el archivo test_project/settings/local.py con la información de tu base de datos.
 
-$ php artisan migrate
-$ php artisan db:seed
-$ php artisan serve
+$ python manage.py makemigrations
+$ python manage.py migrate
 ```
 
 ## Uso
 
-Es una aplicación de una sola página. Encontrarás todas las funciones en la misma.
-* Saldo total (parte superior a la derecha)
-* Crear registro (click en `crear registro`)
-* Editar registro (click en `editar` a la derecha del registro que se desea editar)
-* Borrar registro (click en `borrar` a la derecha del registro que se desea borrar)
-* Botones para `copiar`, `csv`, `excel`, `pdf` e `imprimir` en la parte superior de la tabla
-* Filtro por `naturaleza` y `beneficiario` en la parte superior de la tabla.
-* Mensajes de operaciones (crear, editar, eliminar) en la parte superior de la aplicación.
+Es una aplicación que te permite crear encuentas con preguntas de diferentes tipos.
+
+```
+Para poder acceder al panel de administración crea un superusuario con el siguiente comando:
+
+$ python manage.py createsuperuser
+
+Para correr el servidor en modo local ejecuta el siguiente comando:
+
+$ python manage.py runserver
+```
+
+Enlance para ingresar al panel de administración: http://localhost:8000/admin/
